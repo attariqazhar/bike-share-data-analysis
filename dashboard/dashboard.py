@@ -16,7 +16,7 @@ def df_weather(df):
     return df.groupby('weathersit')['cnt'].sum().reset_index().sort_values('cnt', ascending=False, ignore_index=True)
 
 # Membaca file CSV
-df = pd.read_csv('cleaned_bike_sharing.csv')
+df = pd.read_csv('dashboard/cleaned_bike_sharing.csv')
 
 # Fitur Filtering
 min_date = df["dteday"].min()
