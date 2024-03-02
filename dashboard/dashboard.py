@@ -112,6 +112,7 @@ with col11:
         year = st.selectbox('Year', ('2011 & 2012', '2011', '2012'))
 
 fig, ax = plt.subplots(figsize=(16, 8))
+plt.style.use("dark_background")
 
 if year == '2011 & 2012':
     sns.lineplot(data=df_month(main_df), x="mnth", y="cnt", hue="yr", errorbar=None, marker="o", palette=['purple','green'])
@@ -129,7 +130,6 @@ plt.xticks([1,2,3,4,5,6,7,8,9,10,11,12])
 plt.xlabel('Month')
 plt.ylabel('Sum Users')
 
-plt.style.use("dark_background")
 
 st.pyplot(fig)
 
